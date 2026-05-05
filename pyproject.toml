@@ -1,0 +1,5 @@
+[project]
+name = "radian-tool-lint-scope"
+version = "0.1.0"
+description = "Package a Python local lab for lint analysis with round-trip fixtures, lossless normalization checks, and documented operating limits."
+requires-python = ">=3.11"
