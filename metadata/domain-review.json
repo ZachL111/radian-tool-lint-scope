@@ -1,0 +1,73 @@
+{
+  "repo": "radian-tool-lint-scope",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for lint analysis with round-trip fixtures, lossless normalization checks, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "file span",
+      "terminal width",
+      "argument risk",
+      "report density"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "file span",
+      "signal": 70,
+      "slack": 29,
+      "drag": 30,
+      "confidence": 74,
+      "score": 153,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "terminal width",
+      "signal": 72,
+      "slack": 44,
+      "drag": 16,
+      "confidence": 77,
+      "score": 217,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "argument risk",
+      "signal": 65,
+      "slack": 39,
+      "drag": 16,
+      "confidence": 53,
+      "score": 174,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "report density",
+      "signal": 61,
+      "slack": 36,
+      "drag": 14,
+      "confidence": 47,
+      "score": 163,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "file span",
+      "signal": 74,
+      "slack": 36,
+      "drag": 13,
+      "confidence": 58,
+      "score": 203,
+      "lane": "ship"
+    }
+  ]
+}
