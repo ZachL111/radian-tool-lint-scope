@@ -1,0 +1,32 @@
+{
+  "index": 283,
+  "phase": 2,
+  "batch": 32,
+  "name": "radian-tool-lint-scope",
+  "planned_name": "radian-tool-lint-scope",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for lint analysis with round-trip fixtures, lossless normalization checks, and documented operating limits.",
+  "repository_url": "https://github.com/ZachL111/radian-tool-lint-scope",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 173,
+    "risk_penalty": 5,
+    "latency_penalty": 2,
+    "weight_bonus": 4,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
