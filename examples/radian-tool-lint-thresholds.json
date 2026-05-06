@@ -1,0 +1,17 @@
+{
+  "repo": "radian-tool-lint-scope",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 168,
+    "watch": 129
+  },
+  "terms": [
+    "file span",
+    "terminal width",
+    "argument risk",
+    "report density"
+  ]
+}
